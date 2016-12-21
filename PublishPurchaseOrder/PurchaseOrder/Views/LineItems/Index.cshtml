@@ -1,0 +1,69 @@
+﻿@model IEnumerable<PurchaseOrderApp112916.Models.LineItems>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { id = ViewBag.PurchaseOrderRefId })&nbsp;&nbsp;|&nbsp;&nbsp; @Html.ActionLink("I am finished adding items. Take me to the next screen.", "Next",new { id = ViewBag.PurchaseOrderRefId })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.objPurchaseOrder.PurchaseOrderID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objUnitOfMeasure.UnitOfMeasureDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantityOrdered)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExtendedCost)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.objPurchaseOrder.PurchaseOrderID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.objUnitOfMeasure.UnitOfMeasureDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuantityOrdered)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtendedCost)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LineNumber }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LineNumber }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LineNumber })
+        </td>
+    </tr>
+}
+
+</table>

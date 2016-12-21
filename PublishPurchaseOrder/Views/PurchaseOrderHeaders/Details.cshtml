@@ -1,0 +1,58 @@
+﻿@model PurchaseOrderApp112916.Models.PurchaseOrderHeader
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PurchaseOrderHeader</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.objPurchaseOrder.PurchaseOrderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.objPurchaseOrder.PurchaseOrderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.objShippingMethods.ShippingMethodDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.objShippingMethods.ShippingMethodDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentTerms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentTerms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmWith)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmWith)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.POHeaderIdentity }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

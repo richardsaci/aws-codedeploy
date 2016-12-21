@@ -1,0 +1,98 @@
+﻿@model PurchaseOrderApp112916.Models.Vendor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vendor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.objPurchaseOrder.PurchaseOrderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.objPurchaseOrder.PurchaseOrderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorCompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorCompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorAddressLine1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorAddressLine1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorAddressLine2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorAddressLine2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorAddressLine3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorAddressLine3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorEmail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MyVendorIdentity }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

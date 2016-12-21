@@ -1,0 +1,36 @@
+﻿@model List<PurchaseOrderApp112916.Models.LineItems>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<div class="row">
+
+    <div class="col-md-2" style="text-align:center"><b><u>Item #</u></b></div>
+    <div class="col-md-2" style="text-align:center"><b><u>Description</u></b></div>
+    <div class="col-md-2" style="text-align:center"><b><u>Quantity Ordered</u></b></div>
+    <div class="col-md-2" style="text-align:center"><b><u>Unit of Measure</u></b></div>
+    <div class="col-md-2" style="text-align:right"><b><u>Unit Cost</u></b></div>
+    <div class="col-md-2" style="text-align:right"><b><u>Extended Cost</u></b></div>
+</div>
+<div class="row">
+
+    @foreach (var item in Model)
+            {
+        <div class="col-md-2" style="text-align:left">@item.ItemNumber</div>
+        <div class="col-md-2" style="text-align:left">@item.ItemDescription</div>
+        <div class="col-md-2" style="text-align:center">@item.QuantityOrdered</div>
+        <div class="col-md-2" style="text-align:left">@item.objUnitOfMeasure.UnitOfMeasureDescription</div>
+        <div class="col-md-2" style="text-align:right">@item.UnitCost.ToString("#,##0.00")</div>
+        <div class="col-md-2" style="text-align:right">@item.ExtendedCost.ToString("#,##0.00")</div>
+    }
+
+
+
+
+</div>
+
+

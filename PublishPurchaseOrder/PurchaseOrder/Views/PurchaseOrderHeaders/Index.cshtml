@@ -1,0 +1,57 @@
+﻿@model IEnumerable<PurchaseOrderApp112916.Models.PurchaseOrderHeader>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.objPurchaseOrder.PurchaseOrderID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objShippingMethods.ShippingMethodDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objPaymentTerms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfirmWith)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.objPurchaseOrder.PurchaseOrderID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.objShippingMethods.ShippingMethodDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.objPaymentTerms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConfirmWith)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.POHeaderIdentity }) |
+            @Html.ActionLink("Details", "Details", new { id=item.POHeaderIdentity }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.POHeaderIdentity })
+        </td>
+    </tr>
+}
+
+</table>

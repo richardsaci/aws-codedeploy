@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    
+    ViewBag.Date = DateTime.Now.ToString("MM-dd-yyyy");
+   // ViewBag.subtotal = 550.25M;
+}
+
+
+<h2 style="text-align:center">Purchase Order</h2>
+<br />
+
+
+
+<div class="row">
+    <div class="col-md-3"></div><div class="col-md-3"></div><div class="col-md-3" style="text-align:right"><b>Purchase Order #:</b> &nbsp; </div><div class="col-md-3">@ViewBag.POID</div>
+    <div class="col-md-3"></div><div class="col-md-3"></div><div class="col-md-3" style="text-align:right"><b>Date:</b> &nbsp;</div><div class="col-md-3">@ViewBag.Date</div>
+    <div class="col-md-3"></div><div class="col-md-3"></div><div class="col-md-3" style="text-align:right"><b>Page #:</b> &nbsp;</div><div class="col-md-3"></div>
+   </div> 
+    
+<br />
+    
+<hr />
+<h3 style="text-align:center">Company and Vendor Information</h3>
+
+
+<div class="row">
+    <div class="col-md-6">
+        @{Html.RenderAction("MyCompanyInfo", "ProofPurchaseOrderDocument", new { PurchaseOrderID = ViewBag.POID });
+        }
+    </div>
+
+
+    <div class="col-md-6">
+        @{Html.RenderAction("VendorInfo", "ProofPurchaseOrderDocument", new { PurchaseOrderID = ViewBag.POID });
+        }
+    </div>
+</div>
+<br />
+<hr />
+
+<br />
+
+@{Html.RenderAction("PurchaseOrderHeader", "ProofPurchaseOrderDocument", new { PurchaseOrderID = ViewBag.POID });
+}
+
+
+<br />
+<hr />
+<br />
+@{Html.RenderAction("LineItems", "ProofPurchaseOrderDocument", new { PurchaseOrderID = ViewBag.POID });
+    }
+
+<br />
+
+<hr />
+
+@{Html.RenderAction("FooterTotals", "ProofPurchaseOrderDocument", new { PurchaseOrderID = ViewBag.POID, objSubtotal = ViewBag.subtotal});
+}
+<br /><br /><br /><br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+

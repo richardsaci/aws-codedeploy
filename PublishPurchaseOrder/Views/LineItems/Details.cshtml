@@ -1,0 +1,74 @@
+﻿@model PurchaseOrderApp112916.Models.LineItems
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LineItems</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.objPurchaseOrder.PurchaseOrderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.objPurchaseOrder.PurchaseOrderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.objUnitOfMeasure.UnitOfMeasureDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.objUnitOfMeasure.UnitOfMeasureDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantityOrdered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantityOrdered)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExtendedCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExtendedCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LineNumber }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

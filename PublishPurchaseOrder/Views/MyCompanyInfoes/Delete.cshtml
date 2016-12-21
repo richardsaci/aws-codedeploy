@@ -1,0 +1,104 @@
+﻿@model PurchaseOrderApp112916.Models.MyCompanyInfo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MyCompanyInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.objPurchaseOrder.PurchaseOrderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.objPurchaseOrder.PurchaseOrderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyCompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyCompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyAddressLine1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyAddressLine1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyAddressLine2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyAddressLine2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyAddressLine3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyAddressLine3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyEmail)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

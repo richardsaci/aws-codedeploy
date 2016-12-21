@@ -1,0 +1,26 @@
+﻿@model PurchaseOrderApp112916.Models.UnitOfMeasure
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UnitOfMeasure</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitOfMeasureDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitOfMeasureDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UOMID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

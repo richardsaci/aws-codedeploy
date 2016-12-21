@@ -1,0 +1,19 @@
+﻿@model PurchaseOrderApp112916.Models.PurchaseOrderHeader
+
+@{
+    Layout = null;
+}
+
+
+<div class="col-md-3"><b><u>Reference/Contract Number</u></b></div>
+<div class="col-md-3"><b><u>Payment Terms</u></b></div>
+<div class="col-md-3"><b><u>Confirm With</u></b></div>
+<div class="col-md-3"><b><u>Shipping Method</u></b></div>  
+
+<div class="col-md-3">@Model.ContractNumber</div>
+<div class="col-md-3">@Model.PaymentTerms</div>
+<div class="col-md-3">@Model.ConfirmWith</div>
+<div class="col-md-3">@Model.ShippingMethods</div>  
+
+
+<hr />

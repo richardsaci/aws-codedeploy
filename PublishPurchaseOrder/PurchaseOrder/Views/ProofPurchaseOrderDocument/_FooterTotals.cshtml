@@ -1,0 +1,27 @@
+﻿@model PurchaseOrderApp112916.Models.FooterTotals
+
+
+
+
+@{
+    Layout = null;
+    var ttl = Convert.ToDouble(Model.Subtotal) + Convert.ToDouble(Model.TradeDiscount) + Convert.ToDouble(Model.Freight) + Convert.ToDouble(Model.Misc) + Convert.ToDouble(Model.Tax);
+}
+
+
+
+
+
+
+<div class="col-md-6"></div><div class="col-md-3" style="text-align:right"><b>Subtotal:</b> &nbsp;</div><div class="col-md-3" style="text-align:right">@Model.Subtotal.ToString("#,##0.00") </div>
+<div class="col-md-6"></div><div class="col-md-3" style="text-align:right"><b>Discount:</b> &nbsp;</div><div class="col-md-3" style="text-align:right">@Model.TradeDiscount</div>
+<div class="col-md-6"></div><div class="col-md-3" style="text-align:right"><b>Freight:</b> &nbsp;</div><div class="col-md-3" style="text-align:right">@Model.Freight</div>
+<div class="col-md-6"></div><div class="col-md-3" style="text-align:right"><b>Misc:</b> &nbsp;</div><div class="col-md-3" style="text-align:right">@Model.Misc</div>
+<div class="col-md-6"></div><div class="col-md-3" style="text-align:right"><b>Tax:</b> &nbsp;</div><div class="col-md-3" style="text-align:right">@Model.Tax</div>
+<div class="col-md-6"></div>
+
+
+<div class="col-md-3" style="text-align:right"><b>Total:</b> &nbsp;</div>
+<div class="col-md-3" style="text-align:right">@ttl.ToString("#,##0.00") </div>
+
+

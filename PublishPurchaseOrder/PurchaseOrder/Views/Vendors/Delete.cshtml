@@ -1,0 +1,104 @@
+﻿@model PurchaseOrderApp112916.Models.Vendor
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Vendor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.objPurchaseOrder.PurchaseOrderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.objPurchaseOrder.PurchaseOrderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorCompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorCompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorAddressLine1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorAddressLine1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorAddressLine2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorAddressLine2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorAddressLine3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorAddressLine3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorEmail)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
